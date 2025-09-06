@@ -29,8 +29,8 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas 
 
 ## ⚙️ Instalação
 
-git clone https://github.com/seuusuario/test-robotframework.git
-cd test-robotframework
+* **git clone https://github.com/henriqu/test-robotframework.git**
+* **cd test-robotframework**
 
 ---
 
