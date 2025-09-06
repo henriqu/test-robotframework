@@ -20,33 +20,33 @@ Realizar busca de produto
 
     #Fechar a NewsLetter
     Click Element    xpath=//span[@class="ins-web-opt-in-reminder-close-button"]
-    Sleep    5s
+    Sleep    2s
 
     #Aceitar os Cookies
     Click Element    onetrust-accept-btn-handler
-    Sleep    5s
+    Sleep    3s
 
     #Realizar a validação do campo pesquisar, inserir as palavras uma por uma, pois é um autocomplete. E Clicar no botão Buscar.
     Wait Until Element Is Visible    ${SEARCH}    5s
     Click Element    ${SEARCH} 
     Press Keys    ${SEARCH}    n
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    o
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    t
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    e
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    b
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    o
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    o
-    Sleep    0.2s
+    Sleep    0.1s
     Press Keys    ${SEARCH}    k
-    Sleep    0.2s
+    Sleep    0.1s
     Click Element    ${BUTTON_SEARCH}
-    Sleep    5s
+    Sleep    3s
 
     #Visualizar e Clicar no primeiro item da listavisualizar o primeiro produto da lista
     Wait Until Page Contains Element    xpath=//button[@data-testid="tooltip"]
@@ -56,17 +56,20 @@ Realizar busca de produto
     Wait Until Element Is Visible    ${CONSULTE_FRETE}
 
 Consultar os valores de frete
+    #Nessa etapa irá validar se o campo CEP existe, existindo, irá preenhecer com um CEP pre definido e validar após ele carregar automaticamente.
     Wait Until Element Is Visible    ${CALCULAR_FRETE}
-    Sleep    10s
+    Sleep    5s
     Click Element    ${CALCULAR_FRETE}
     Input Text    ${CALCULAR_FRETE}    ${CEP}
-    Sleep    10s
+    Sleep    5s
 
 Inserir o produto no carrinho
+    #Inserindo o produto no carrinho após ele realizar a busca do CEP
     Wait Until Element Is Visible    ${BUTTON_COMPRAR}
     Click Element    ${BUTTON_COMPRAR}
-    Sleep    10s
+    Sleep    5s
 Definir o tipo de garantia extendida
+    #Validar se os valores de 12 meses estão selecionados, caso estejam ir para a tela de resumo de pedido.
     Wait Until Element Is Visible    ${GARANTIA_ESTENTIDA}
     Wait Until Element Is Visible    ${ROUBO_FURTO}
     Radio Button Should Be Set To    garantia    4152720
@@ -75,6 +78,7 @@ Definir o tipo de garantia extendida
     Click Element    ${BUTTON_ADICIONAR_SERVICO}
 
 Validar o produto no carrinho
+    #Apenas validar se está na tela correta.
     Wait Until Element Is Visible    ${RESUMO_COMPRA}
     Wait Until Element Is Visible    ${VALOR_PRODUTOS}
     Wait Until Element Is Visible    ${SERVIÇOS_ADICIONAIS}

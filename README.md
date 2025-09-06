@@ -1,6 +1,6 @@
 # 🤖 Automação Web e API usando Robot Framework e Selenium
 
-Este projeto visa demonstrar minhas habilidades nesses dois frameworks.
+Este projeto visa demonstrar habilidades práticas em automação de testes Web e API, utilizando o Robot Framework com suporte do Selenium.
 
 ---
 
@@ -10,12 +10,10 @@ Este projeto visa demonstrar minhas habilidades nesses dois frameworks.
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Requisitos
 
-* **Extração de Texto**: Leitura e processamento do conteúdo do PDF do PPC.
-* **Recuperação de Informações**: Utilização do algoritmo BM25 para encontrar os trechos mais relevantes do documento com base na pergunta do usuário.
-* **Geração de Respostas**: Emprego de um modelo de linguagem grande (LLM) para formular respostas precisas e contextuais a partir dos trechos recuperados.
-* **Interface Interativa**: Chatbot construído com Streamlit para uma experiência de usuário amigável.
+* **Python**: 3.13.7.
+* **Robot Framework**: 7.3.2.
 
 ---
 
@@ -24,8 +22,25 @@ Este projeto visa demonstrar minhas habilidades nesses dois frameworks.
 Este projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas Python:
 
 * **Python**: Linguagem de programação principal.
-* **Robot Framework**: Framework responsável pela automação WEB e API.
-* **Selenium**: Bibllioteca sendo usada como suporte.
+* **Robot Framework**: Framework de automação de testes (Web e API).
+* **SeleniumLibrary**: BBiblioteca do Robot que utiliza o Selenium WebDriver para automação Web.
+
+---
+
+## ⚙️ Instalação
+
+git clone https://github.com/seuusuario/test-robotframework.git
+cd test-robotframework
+
+---
+
+## 📊 Saídas Analíticas
+
+Após a execução, os relatórios ficam disponíveis na pasta **results/**:
+
+- `log.html` → Detalhes da execução passo a passo.
+- `report.html` → Resumo com métricas de sucesso e falha.
+- `output.xml` → Saída estruturada para integração com outras ferramentas.
 
 ---
 
@@ -36,9 +51,12 @@ A organização do projeto segue uma estrutura modular para facilitar o desenvol
 ```bash
 test-robotframework/
 ├── automateback-end/
-│   └── resources
-|   └── test   
+│   └── resources/
+│   └── test/
 ├── automatefront-end/
-│   └── resources
-|   └── test                                   
-├── README.md                  
+│   └── resources/
+│   └── test/
+├── results/               # Relatórios de execução
+├── README.md
+
+---     
