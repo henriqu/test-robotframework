@@ -16,6 +16,7 @@ Validar CEP Incorreto
 Validar CEP com Formato Incorreto
     Abertura de Sessão ViaCEP
     Validar CEP com Formato Incorreto    5364578
+    Validar CEP com Formato Incorreto    53645789855
 
 Validar CEP com Caracters Especiais
     Abertura de Sessão ViaCEP
