@@ -1,0 +1,26 @@
+BROWSER: chrome
+URL: https://www.kabum.com.br/
+
+#Realizar busca de produto
+CLOSE_NEWSLETTER: xpath=//span[@class="ins-web-opt-in-reminder-close-button"]
+CLOSE_COOKIES: onetrust-accept-btn-handler
+SEARCH: xpath=//input[@placeholder="Busque no KaBuM!"]
+BUTTON_SEARCH: xpath=//button[@data-testid="buttonBuscaKabum"]
+PRODUTO_FIRST_LIST: xpath=(//a[contains(@class,"productLink")])[1] 
+CONSULTE_FRETE: //*[@id="blocoCalcularFrete"]/span/span[2]
+
+#Consultar os valores de frete
+CALCULAR_FRETE: inputCalcularFrete
+CEP: 53640083
+
+#Inserir o produto no carrinho
+BUTTON_COMPRAR: //*[@id="main-content"]/div[1]/div[1]/div[1]/div[3]/div[3]/button[2]
+URL_GARANTIA: https://www.kabum.com.br/produto/522818/notebook-lenovo-ideapad-1i-intel-core-i3-1215u-4gb-ram-ssd-256gb-tela-15-6-hd-win-11-cinza-82vy000tbr
+GARANTIA_ESTENTIDA: //*[@id="radix-:r2:"]/h3
+ROUBO_FURTO: //*[@id="radix-:r5:"]/h3
+BUTTON_ADICIONAR_SERVICO: //*[@id="main-content"]/div[1]/div/div[2]/section/section/button[1]
+
+#Validar o produto no carrinho
+RESUMO_COMPRA: //*[@id="main-content"]/div[1]/div[2]/div[2]/div/section/div[1]/h2
+VALOR_PRODUTOS: valorDosProdutos
+SERVIÇOS_ADICIONAIS: servicosAdicionais
